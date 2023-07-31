@@ -55,5 +55,9 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "dependencies": {
+    "@sveltejs/adapter-vercel": "^3.0.3",
+    "firebase": "9"
   }
 }
