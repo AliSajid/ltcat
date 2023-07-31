@@ -19,7 +19,7 @@ module.exports = {
       },
     },
   ],
-  'plugins': ['prettier-plugin-svelte'],
+  'plugins': ['prettier-plugin-svelte', 'prettier-plugin-tailwindcss'],
   'printWidth': 120,
   'quoteProps': 'preserve',
   'requirePragma': false,
