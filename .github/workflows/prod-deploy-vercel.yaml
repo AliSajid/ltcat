@@ -54,6 +54,8 @@ jobs:
       - name: Test
         run: pnpm run test
       - name: Create a release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT_GITHUB }}
         run: pnpm run release
   Depoy-Production:
     runs-on: ubuntu-latest
