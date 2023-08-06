@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-  darkMode: 'class',
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {},
   },
@@ -12,4 +12,8 @@ export default {
     require('@tailwindcss/container-queries'),
     require('daisyui'),
   ],
+  daisyui: {
+    themes: ['lofi', 'business'],
+    darkTheme: 'business',
+  },
 };
