@@ -3,6 +3,7 @@
   import { auth } from '$lib/firebase';
   import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
   import { goto } from '$app/navigation';
+  import { user } from '$lib/users';
 
   /**
    * Signs up the user with Google authentication provider.
@@ -26,25 +27,26 @@
     goto('/profile');
   }
 
-  // /**
-  //  * Signs out the current user from the application.
-  //  * @return {Promise<void>} A Promise that resolves when the user is signed out.
-  //  */
-  // async function signOutApp() {
-  //   await signOut(auth);
-  // }
-
   // export let data: PageData;
 </script>
 
-<div class="card w-96 card-normal text-primary-content">
-  <div class="card-body items-center text-center">
-    <h1 class="card-title">Sign Up</h1>
-    <button class="btn btn-primary card-actions w-4/5 rounded-s text-center" on:click={signUpWithGithub}
-      >Sign up with Github</button
-    >
-    <button class="btn btn-primary card-actions justify-center w-4/5 rounded-s" on:click={signUpWithGoogle}
-      >Sign up with Google</button
-    >
+{#if !$user}
+  <div class="card w-96 card-normal text-primary-content">
+    <div class="card-body items-center text-center">
+      <h1 class="card-title">Sign Up</h1>
+      <button class="btn btn-primary card-actions w-4/5 rounded-s text-center" on:click={signUpWithGithub}
+        >Sign up with Github</button
+      >
+      <button class="btn btn-primary card-actions justify-center w-4/5 rounded-s" on:click={signUpWithGoogle}
+        >Sign up with Google</button
+      >
+    </div>
   </div>
-</div>
+{:else}
+  <div class="card w-96 card-normal text-primary-content">
+    <div class="card-body items-center text-center">
+      <h1 class="card-title">Hello, {$user.displayName}</h1>
+      <h2 class="card-title">You are already logged in</h2>
+    </div>
+  </div>
+{/if}
