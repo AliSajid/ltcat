@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PageData } from '../$types';
+  // import type { PageData } from '../$types';
   import { auth } from '$lib/firebase';
   import { signInWithPopup, GoogleAuthProvider, signOut, GithubAuthProvider } from 'firebase/auth';
   import { goto } from '$app/navigation';
@@ -22,7 +22,7 @@
     await signOut(auth);
   }
 
-  export let data: PageData;
+  // export let data: PageData;
 </script>
 
 <div class="card w-96 card-normal text-primary-content">
