@@ -14,7 +14,8 @@
       },
       "runOptions": {
         "runOn": "folderOpen"
-      }
+      },
+      "problemMatcher": []
     },
     {
       "label": "Dev Server",
@@ -27,7 +28,8 @@
       },
       "runOptions": {
         "runOn": "folderOpen"
-      }
+      },
+      "problemMatcher": []
     },
     {
       "label": "Storybook",
@@ -40,7 +42,8 @@
       },
       "runOptions": {
         "runOn": "folderOpen"
-      }
+      },
+      "problemMatcher": []
     }
   ]
 }
