@@ -7,7 +7,7 @@
 <div class="h-screen flex flex-col">
   <NavBar />
   <main class="flex-grow flex items-center">
-    <div class="mx-auto">
+    <div class="mx-auto w-2/3">
       <slot />
     </div>
   </main>
