@@ -6,8 +6,10 @@
 
 <div class="h-screen flex flex-col">
   <NavBar />
-  <main class="flex-grow">
-    <slot />
+  <main class="flex-grow flex items-center">
+    <div class="mx-auto">
+      <slot />
+    </div>
   </main>
   <Footer />
 </div>
