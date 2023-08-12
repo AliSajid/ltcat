@@ -1,9 +1,13 @@
 <script lang="ts">
   // import type { PageData } from '../$types';
   import { auth } from '$lib/firebase';
-  import { signInWithPopup, GoogleAuthProvider, signOut, GithubAuthProvider } from 'firebase/auth';
+  import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
   import { goto } from '$app/navigation';
 
+  /**
+   * Signs up the user with Google authentication provider.
+   * @returns A Promise that resolves when the user is signed up.
+   */
   async function signUpWithGoogle(): Promise<void> {
     const provider = new GoogleAuthProvider();
     const credential = await signInWithPopup(auth, provider);
@@ -11,6 +15,10 @@
     goto('/profile');
   }
 
+  /**
+   * Signs up the user with Github authentication provider.
+   * @returns A Promise that resolves when the user is signed up.
+   */
   async function signUpWithGithub(): Promise<void> {
     const provider = new GithubAuthProvider();
     const credential = await signInWithPopup(auth, provider);
@@ -18,9 +26,13 @@
     goto('/profile');
   }
 
-  async function signOutApp() {
-    await signOut(auth);
-  }
+  // /**
+  //  * Signs out the current user from the application.
+  //  * @return {Promise<void>} A Promise that resolves when the user is signed out.
+  //  */
+  // async function signOutApp() {
+  //   await signOut(auth);
+  // }
 
   // export let data: PageData;
 </script>

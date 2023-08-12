@@ -31,6 +31,10 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
+      rules: {
+        'valid-jsdoc': 'off',
+        'require-jsdoc': 'off',
+      },
     },
     {
       files: ['*.ts', '*.tsx'],
