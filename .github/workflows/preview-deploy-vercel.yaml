@@ -24,7 +24,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.tool-versions'
+          node-version: '18'
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -74,7 +74,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.tool-versions'
+          node-version: '18'
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
