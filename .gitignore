@@ -38,3 +38,8 @@ src/stories/assets/testing.png
 src/stories/assets/theming.png
 src/stories/assets/tutorials.svg
 src/stories/assets/youtube.svg
+
+# Firebase Default Items
+firestore-debug.log
+ui-debug.log
+emulator-data/
