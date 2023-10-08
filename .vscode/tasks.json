@@ -30,20 +30,6 @@
         "runOn": "folderOpen"
       },
       "problemMatcher": []
-    },
-    {
-      "label": "Storybook",
-      "type": "shell",
-      "command": "pnpm run storybook",
-      "group": "none",
-      "presentation": {
-        "reveal": "silent",
-        "panel": "shared"
-      },
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-      "problemMatcher": []
     }
   ]
 }

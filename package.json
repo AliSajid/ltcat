@@ -19,9 +19,7 @@
     "test:integration": "playwright test",
     "test:unit": "vitest",
     "emulate": "firebase emulators:start --export-on-exit=./emulator-data --import=./emulator-data",
-    "release": "semantic-release",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@playwright/test": "^1.38.0",
