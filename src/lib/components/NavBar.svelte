@@ -4,7 +4,11 @@
   import { user } from '$lib/users';
   import { signOut } from 'firebase/auth';
 
-  async function handleLogout() {
+  /**
+   * Signs out the current user from the application.
+   * @returns A Promise that resolves when the user is signed out.
+   */
+  async function handleLogout(): Promise<void> {
     await signOut(auth);
     goto('/');
   }
