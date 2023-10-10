@@ -6,15 +6,24 @@ import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 import { getPerformance } from 'firebase/performance';
 import { browser } from '$app/environment';
+import {
+  PUBLIC_FIREBASE_API_KEY,
+  PUBLIC_FIREBASE_AUTH_DOMAIN,
+  PUBLIC_FIREBASE_PROJECT_ID,
+  PUBLIC_FIREBASE_STORAGE_BUCKET,
+  PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  PUBLIC_FIREBASE_APP_ID,
+  PUBLIC_FIREBASE_MEASUREMENT_ID,
+} from '$env/static/public';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDVeb6azdjnk1Ec3fgfWegvwyAAEETQPHs', // pragma: allowlist secret
-  authDomain: 'ltcat-340f7.firebaseapp.com',
-  projectId: 'ltcat-340f7',
-  storageBucket: 'ltcat-340f7.appspot.com',
-  messagingSenderId: '733830252896',
-  appId: '1:733830252896:web:1e75f66f8f7f3f036cf605',
-  measurementId: 'G-6PC24D198C',
+  apiKey: PUBLIC_FIREBASE_API_KEY,
+  authDomain: PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: PUBLIC_FIREBASE_APP_ID,
+  measurementId: PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
