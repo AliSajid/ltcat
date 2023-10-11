@@ -41,5 +41,6 @@ src/stories/assets/youtube.svg
 
 # Firebase Default Items
 firestore-debug.log
+firebase-debug.log
 ui-debug.log
 emulator-data/
