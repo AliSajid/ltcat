@@ -4,4 +4,4 @@ interface FirebaseCredentials {
   clientEmail: string;
 }
 
-export { FirebaseCredentials };
+export default FirebaseCredentials;
