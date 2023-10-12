@@ -4,6 +4,7 @@
   import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
   import { goto } from '$app/navigation';
   import { user } from '$lib/users';
+  import { getProfile, setProfile } from '$lib/interfaces/profile';
 
   /**
    * Signs up the user with Google authentication provider.
@@ -13,6 +14,15 @@
     const provider = new GoogleAuthProvider();
     const credential = await signInWithPopup(auth, provider);
     console.info(credential);
+    try {
+      await getProfile(credential.user.uid);
+    } catch (error) {
+      await setProfile(credential.user.uid, {
+        name: credential.user.displayName,
+        email: credential.user.email,
+        uid: credential.user.uid,
+      });
+    }
     goto('/profile');
   }
 

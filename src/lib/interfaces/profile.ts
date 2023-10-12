@@ -35,3 +35,5 @@ export async function setProfile(id: string, profile: Profile): Promise<void> {
   const docRef = doc(db, 'profiles', id);
   await setDoc(docRef, profile);
 }
+
+export default Profile;
