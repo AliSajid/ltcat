@@ -7,6 +7,11 @@
   let text: string;
   let profile: Profile;
 
+  /**
+   * Loads the profile data for the currently authenticated user.
+   * If no user is authenticated, a default profile is returned.
+   * @returns A Promise that resolves when the profile data is loaded.
+   */
   async function loadProfile() {
     if ($user) {
       profile = await getProfile($user.uid);
