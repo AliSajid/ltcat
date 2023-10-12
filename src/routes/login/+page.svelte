@@ -33,7 +33,7 @@
   async function signUpWithGithub(): Promise<void> {
     const provider = new GithubAuthProvider();
     const credential = await signInWithPopup(auth, provider);
-    console.info(credential);
+    console.info(credential.user.toJSON());
     goto('/profile');
   }
 
