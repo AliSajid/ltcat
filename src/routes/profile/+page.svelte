@@ -7,16 +7,20 @@
   let text: string;
   let profile: Profile;
 
-  if ($user) {
-    profile = getProfile($user.uid);
-  } else {
-    profile = {
-      'name': 'No user',
-      'email': 'NoUser@example.com',
-      'uid': 'Tm8gVXNlcgo=',
-    };
-    console.log('No user');
+  async function loadProfile() {
+    if ($user) {
+      profile = await getProfile($user.uid);
+    } else {
+      profile = {
+        name: 'No user',
+        email: 'NoUser@example.com',
+        uid: 'Tm8gVXNlcgo=',
+      };
+      console.log('No user');
+    }
   }
+
+  loadProfile();
 </script>
 
 <AuthCheck>

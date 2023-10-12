@@ -1,8 +1,7 @@
-import { auth, db } from '$lib/firebase';
-import { derived, writable, type Readable } from 'svelte/store';
+import { auth } from '$lib/firebase';
+import { writable } from 'svelte/store';
 import { onAuthStateChanged, type User } from 'firebase/auth';
 import { browser } from '$app/environment';
-import { doc, onSnapshot } from 'firebase/firestore';
 
 /**
  * Creates a writable store that tracks the current user's authentication state using the Firebase Authentication library.
@@ -34,53 +33,3 @@ function userStore(): { subscribe: (callback: (value: User | null) => void) => v
 }
 
 export const user = userStore();
-
-/**
- * Creates a writable store that subscribes to changes in a Firestore document.
- * @template T - The type of data stored in the Firestore document.
- * @param path - The path to the Firestore document.
- * @returns
- *
- *
- *
- *  - An object with three properties:
- * - `subscribe`: a writable store that subscribes to changes in the Firestore document.
- * - `ref`: a reference to the Firestore document.
- * - `id`: the ID of the Firestore document.
- */
-export function docStore<T>(path: string) {
-  let unsubscribe: () => void;
-
-  const docRef = doc(db, path);
-
-  const { subscribe } = writable<T | null>(null, (set) => {
-    unsubscribe = onSnapshot(docRef, (snapshot) => {
-      set((snapshot.data() as T) ?? null);
-    });
-
-    return () => unsubscribe();
-  });
-
-  return {
-    subscribe,
-    ref: docRef,
-    id: docRef.id,
-  };
-}
-
-interface UserData {
-  userId: string;
-  displayName: string;
-  photoURL: string;
-}
-
-/**
- * Creates a derived store that subscribes to changes in the Firestore document for the current user.
- */
-export const userData: Readable<UserData | null> = derived(user, ($user, set) => {
-  if ($user) {
-    return docStore<UserData>(`users/${$user.uid}`).subscribe(set);
-  } else {
-    set(null);
-  }
-});
