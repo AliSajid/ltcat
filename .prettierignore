@@ -11,6 +11,7 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+/.pnpm-store/
 
 # Ignore the detect-secrets baseline file
 .secrets.baseline

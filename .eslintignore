@@ -11,3 +11,11 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Ignore the boilerplate storybook files
+src/stories/*.css
+src/stories/*.mdx
+src/stories/*.svelte
+src/stories/Button.stories.ts
+src/stories/Header.stories.ts
+src/stories/Page.stories.ts

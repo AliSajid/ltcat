@@ -10,7 +10,6 @@ module.exports = {
     'plugin:svelte/recommended',
     'plugin:svelte/prettier',
     'prettier',
-    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -30,6 +29,10 @@ module.exports = {
       parser: 'svelte-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
+      },
+      rules: {
+        'valid-jsdoc': 'off',
+        'require-jsdoc': 'off',
       },
     },
     {

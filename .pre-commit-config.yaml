@@ -20,9 +20,9 @@ repos:
     hooks:
       - id: eslint
         additional_dependencies:
-          - 'eslint@v8.28.0'
-          - '@typescript-eslint/eslint-plugin@5.45.0'
-          - 'eslint-plugin-svelte@2.32.4'
+          - 'eslint@v8.49.0'
+          - '@typescript-eslint/eslint-plugin@5.62.0'
+          - 'eslint-plugin-svelte@2.33.1'
           - 'prettier@3.0.0'
         files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
         types: [file]
