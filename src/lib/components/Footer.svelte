@@ -4,4 +4,5 @@
     <a href="/terms-of-service" class="link link-primary mx-2">Terms of Service</a>
     <a href="/cookie-policy" class="link link-primary mx-2">Cookie Policy</a>
   </div>
+  <a href="/privacy-policy">Privacy Policy</a>
 </footer>
