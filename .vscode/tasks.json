@@ -4,32 +4,32 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Unit Test",
-      "type": "shell",
-      "command": "pnpm run test:unit",
-      "group": "none",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "Dev Server",
+      "detail": "vite dev",
       "presentation": {
         "reveal": "always",
         "panel": "shared"
       },
       "runOptions": {
         "runOn": "folderOpen"
-      },
-      "problemMatcher": []
+      }
     },
     {
-      "label": "Dev Server",
-      "type": "shell",
-      "command": "pnpm run dev",
-      "group": "none",
+      "type": "npm",
+      "script": "test:unit",
+      "problemMatcher": [],
+      "label": "Unit Tests",
+      "detail": "vitest",
       "presentation": {
-        "reveal": "always",
-        "panel": "new"
+        "reveal": "silent",
+        "panel": "shared"
       },
       "runOptions": {
         "runOn": "folderOpen"
-      },
-      "problemMatcher": []
+      }
     }
   ]
 }
