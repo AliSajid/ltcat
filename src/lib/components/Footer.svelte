@@ -2,4 +2,5 @@
   <div>
     <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
   </div>
+  <a href="/privacy-policy">Privacy Policy</a>
 </footer>

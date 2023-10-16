@@ -42,6 +42,8 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         'valid-jsdoc': 'off',
         'require-jsdoc': 'off',
+        'no-unused-vars': ['error', { varsIgnorePattern: '^[ssr|csr|prerender]', args: 'none' }],
+        '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^[ssr|csr|prerender]' }],
       },
     },
   ],
