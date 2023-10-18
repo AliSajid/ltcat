@@ -73,7 +73,9 @@
 
   <h2 class="text-xl font-semibold mb-2">10. Contact Us</h2>
   <p class="mb-4">
-    If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at [Your Contact
-    Information].
+    If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at <a
+      href="mailto:ltcat.privacy@imamiland.com"
+      class="link link-info">ltcat.privacy@imamiland.com</a
+    >.
   </p>
 </div>
