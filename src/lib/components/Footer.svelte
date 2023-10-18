@@ -2,6 +2,9 @@
   <div class="inline-block">
     <a href="/privacy-policy" class="link link-primary mx-2">Privacy Policy</a>
     <a href="/terms-of-service" class="link link-primary mx-2">Terms of Service</a>
+<<<<<<< HEAD
     <a href="/cookie-policy" class="link link-primary mx-2">Cookie Policy</a>
+=======
+>>>>>>> 6d94d4b (feat: add terms of service route)
   </div>
 </footer>

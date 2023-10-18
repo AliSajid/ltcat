@@ -1,7 +1,5 @@
 <script lang="ts">
-  //   import type { PageData } from './$types';
-
-  //   export let data: PageData;
+  export const prerender = true;
 </script>
 
 <h1 class="text-3xl text-center">Lost Terminal Podcast Categorizer</h1>
