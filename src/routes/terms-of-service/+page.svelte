@@ -42,13 +42,8 @@
   <h2 class="text-xl font-semibold mb-2">6. Contact Us</h2>
   <p class="mb-4">
     If you have any questions or concerns regarding these Terms of Service, please contact us at <a
-<<<<<<< HEAD
       href="mailto:ltcat.tos@imamiland.com"
       class="link link-info">ltcat.tos@imamiland.com</a
-=======
-      href="mailto:ltcat.privacy@imamiland.com"
-      class="link link-info">ltcat.privacy@imamiland.com</a
->>>>>>> 6d94d4b (feat: add terms of service route)
     >.
   </p>
 </div>
