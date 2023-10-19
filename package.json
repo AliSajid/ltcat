@@ -1,6 +1,6 @@
 {
   "name": "ltcat",
-  "version": "1.0.0-next.9",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.6.11",
   "repository": {
     "type": "git",
@@ -81,7 +81,9 @@
       [
         "@semantic-release/git",
         {
-          "assets": ["package.json"]
+          "assets": [
+            "package.json"
+          ]
         }
       ],
       "@semantic-release/github"
