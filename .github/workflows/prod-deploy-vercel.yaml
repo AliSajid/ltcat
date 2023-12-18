@@ -53,7 +53,7 @@ jobs:
         run: pnpm install
       - name: Ensure playwright has the latest browser binaries
         run: pnpx playwright install --with-deps
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: playwright-report
